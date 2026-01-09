@@ -24,3 +24,4 @@
 - **Save**: `docker save -o [output_file.tar] [image_name]` - Save a Docker image to a tar file.
 - **Load**: `docker load -i [input_file.tar]` - Load a Docker image from a tar file.
 - **attach**: `docker attach [container_id]` - Attach to a running container's console.
+- **Clear Unused Data**: `docker system prune` - Remove unused data, including stopped containers, unused networks, dangling images, and build cache.
