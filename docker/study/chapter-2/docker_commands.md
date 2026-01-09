@@ -1,0 +1,26 @@
+### Docker Commands
+
+- **Run**: `docker run [options] [image_name]` - Create and start a container from an image.
+    - ***Observation***: The `docker run ubuntu` command will download the Ubuntu image, but it will not maintain a running container because Ubuntu is a Operating System, and Docker containers are designed to run applications or services, not full OS instances.
+    - Use the `-d` option to run the container in detached mode (in the background).
+    - Use the `-it` option to run the container interactively with a terminal.
+- **Start**: `docker start [container_id]` - Start a stopped container.
+- **Exec**: `docker exec -it [container_id] [command]` - Run a command in a running container interactively.
+- **ps**: `docker ps [options]` - List running containers. Use `-a` to list all containers (running and stopped).
+- **Stop**: `docker stop [container_id]` - Stop a running container.
+- **Remove Container**: `docker rm [container_id]` - Remove a stopped container
+- **Images**: `docker images` - List all Docker images on the local machine.
+- **Remove Image**: `docker rmi [image_id]` - Remove a Docker image.
+- **Pull**: `docker pull [image_name]` - Download an image from a Docker registry.
+- **Build**: `docker build -t [image_name] [path]` - Build a Docker image from a Dockerfile located at the specified path.
+- **Logs**: `docker logs [container_id]` - View the logs of a container.
+- **Inspect**: `docker inspect [container_id or image_id]` - Display detailed information about a container or image.
+- **Network**: `docker network ls` - List all Docker networks.
+- **Volume**: `docker volume ls` - List all Docker volumes.
+- **Compose Up**: `docker-compose up` - Start services defined in a `docker-compose.yml` file.
+- **Compose Down**: `docker-compose down` - Stop and remove services defined in a `docker-compose.yml` file.
+- **Tag**: `docker tag [source_image] [target_image]` - Tag an image with a new name.
+- **Push**: `docker push [image_name]` - Upload an image to a Docker registry.
+- **Save**: `docker save -o [output_file.tar] [image_name]` - Save a Docker image to a tar file.
+- **Load**: `docker load -i [input_file.tar]` - Load a Docker image from a tar file.
+- **attach**: `docker attach [container_id]` - Attach to a running container's console.

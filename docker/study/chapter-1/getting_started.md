@@ -13,3 +13,5 @@
     - `docker rm [container_id]`: Remove a stopped container.
     - `docker images`: List all downloaded Docker images.
     - `docker rmi [image_name]`: Remove a Docker image.
+
+- If you receive permission errors: `sudo usermod -aG docker $USER` and `newgrp docker` to apply the changes.
