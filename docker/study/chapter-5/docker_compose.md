@@ -56,3 +56,12 @@
     ```
     - You can use `build: ./path_to_dockerfile` instead of `image: image_name` to build the image from a Dockerfile in the specified path.
     - **Note**: The `version` field is optional in modern Docker Compose (v1.27.0+) and deprecated. The Compose Specification format is now recommended, which doesn't require specifying a version.
+
+#### Setting Up Docker Compose
+
+1. **Install Docker Compose**:
+    - Follow the official installation guide: https://docs.docker.com/compose/install/ **or** https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
+2. **Create a `docker-compose.yml` file**:
+    - Define your services, networks, and volumes in this file.
+3. **Run Docker Compose**:
+    - Use `docker-compose up` to start your application.
