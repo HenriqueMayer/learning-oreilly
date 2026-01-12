@@ -28,3 +28,63 @@
 - Real-time **collaboration** and **version control** with Git integration
 - **CI/CD support** via Azure DevOps, Jenkins, GitHub Actions
 - **Databricks CLI** for automation and scripting
+
+---
+
+## Module 2 Summary: Data Storage and Management
+
+### Lesson 1: Accessing Data Storage
+- **DBFS** (Databricks File System): Distributed file system mounted to workspace
+- **Cloud Storage**: Integration with S3, Azure Blob, GCS
+- **Unity Catalog**: Unified governance for all data assets with fine-grained access control
+- **Table Types**: Managed tables (Databricks handles storage) vs External tables (user manages storage)
+
+### Lesson 2: Delta Tables
+- Core component of Delta Lake with **ACID transactions** and **time travel**
+- Built on **Parquet files** (columnar, binary, compressed) + **transaction log** (`_delta_log`)
+- Key features: Schema enforcement/evolution, optimized reads, upserts/deletes
+- Parquet vs JSON: Binary columnar format vs text row-based format
+
+### Lesson 3: Data Transformation
+- SQL and DataFrames for data manipulation
+- **CRUD operations**: CREATE, INSERT, SELECT, UPDATE, DELETE, DROP
+- **JOIN types**: Inner, Left, Right, Full Outer, Cross
+- Aggregation functions: COUNT, COUNT_IF, GROUP BY, DISTINCT
+
+### Lesson 4: JSON, Arrays, and Functions
+- Reading/writing JSON data with Spark DataFrames
+- Array functions: `explode`, `array_contains`, `size`
+- **User-Defined Functions (UDFs)**: Extend Spark functionality with custom Python/Scala code
+
+---
+
+## Module 3 Summary: Delta Lake Operations
+
+### Lesson 1: Delta Lake and Delta Tables
+- Delta Lake: Open-source storage layer with ACID transactions for big data
+- Transaction log tracks all changes in `_delta_log` directory (JSON files)
+- Supports time travel, schema evolution, and optimized queries
+
+### Lesson 2: Table Operations
+- **Create**: `CREATE TABLE ... USING DELTA`
+- **Convert**: `CONVERT TO DELTA parquet.'path'`
+- **Alter**: `ALTER TABLE ADD COLUMNS`, `ALTER COLUMN TYPE`
+- **Maintenance**: `VACUUM` (clean old files), `OPTIMIZE` (compact small files)
+- **History**: `DESCRIBE HISTORY`, `RESTORE ... TO VERSION AS OF`
+- **Merge**: `MERGE INTO` for upserts
+- **Copy**: `COPY INTO` for loading from cloud storage
+
+### Lesson 3: Delta Table Transactions and Optimizations
+- ACID operations: INSERT, UPDATE, DELETE, MERGE
+- **Optimistic concurrency control** for handling simultaneous transactions
+- **Optimizations**: Data skipping, Z-Order clustering, compaction, caching
+
+### Lesson 4: Delta Live Tables (DLT)
+- Framework for building reliable, maintainable data pipelines
+- **Declarative pipelines**: Focus on "what" not "how" (SQL or Python)
+- **Automated data quality** checks and monitoring
+- **Incremental processing**: Only process new/changed data
+- Creates `LIVE TABLE` with built-in lineage tracking
+
+---
+
