@@ -88,3 +88,48 @@
 
 ---
 
+## Module 4 Summary: Pipeline Orchestration and Streaming
+
+### Lesson 1: Pipeline Orchestration
+- **Live Tables vs Streaming Tables**: DLT-managed vs Spark Structured Streaming
+- **Declarative pipelines**: Define "what" not "how" using SQL or Python
+- **Autoloader**: Automatically detects and ingests new files as they arrive
+  - Supports JSON, CSV, Parquet, Avro formats
+  - Auto-manages schema changes and scales efficiently
+
+### Lesson 2: Job Management
+- **Jobs**: Automated workflows to run notebooks, JARs, Python scripts
+- **Job Clusters**: Dedicated clusters separate from interactive clusters
+- **Scheduling**: Periodic execution (hourly, daily) or trigger-based runs
+- **Features**: Retries on failure, email/webhook notifications, job dependencies
+
+### Lesson 3: Structured Streaming
+- Scalable, fault-tolerant stream processing built on Spark
+- **Sources**: Kafka, Kinesis, Event Hubs, file systems
+- **Sinks**: Delta Tables, Parquet, Kafka, console
+- **Output Modes**: `append`, `complete`, `update`
+- **Checkpointing**: Essential for fault tolerance and recovery
+- **Triggers**: Processing time intervals, once trigger, continuous
+
+---
+
+## Module 5 Summary: Governance and Access Management
+
+### Lesson 1: Unity Catalog
+- Centralized governance for data and AI assets across all workspaces
+- **Hierarchy**: Metastore → Catalog → Schema → Tables/Views
+- **Features**: Fine-grained access control (table, column, row level), data lineage, cloud IAM integration
+- **Row-Level Security**: Create and attach row access policies
+
+### Lesson 2: Access Management
+- **Databricks Identities**: Users and groups via cloud IAM (AWS IAM, Azure AD)
+- **Privileges**: SELECT, INSERT, UPDATE, DELETE on data objects
+- **Commands**: `GRANT`, `REVOKE`, `SHOW GRANTS`
+- **Service Principals**: Non-human identities for applications
+- **SQL Warehouses**: Optimized compute for interactive SQL queries with auto-scaling and caching
+
+### Lesson 3: Workspace Management
+- Organizing workspaces with folders and notebooks
+- User roles and permissions management
+- Version control integration (GitHub, Azure DevOps)
+- **Isolation by LOB**: Separate workspaces per line of business for security, governance, and cost management
