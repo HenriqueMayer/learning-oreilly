@@ -54,4 +54,3 @@ Without MLOps                                With MLOps
 - **40% Better:** Improvement in model performance
 - **65% Reliable:** Fewer production incidents
 - **4x Scalability:** Enhanced ability to handle growing workloads
-
